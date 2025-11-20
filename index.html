@@ -57,10 +57,61 @@
             font-size: 14px;
             color: #777;
         }
+
+        /* Navigation (same as socials.html) */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #222;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #e84e89;
+        }
     </style>
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Anika Clark</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="socials.html">Socials</a></li>
+    </ul>
+  </div>
+</nav>
 
 <header>
     <h1>Anika Clark's Portfolio</h1>
@@ -70,15 +121,6 @@
         and print designs. Feel free to explore and reach out!
     </p>
 </header>
-
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="socials.html">Socials</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
-</nav>
 
 <section>
     <h2 style="text-align:center; margin-bottom:20px;">My Work</h2>

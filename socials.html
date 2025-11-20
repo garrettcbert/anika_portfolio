@@ -1,28 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
     <title>Socials – Anika Clark</title>
-    <meta charset="UTF-8">
+
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            color: #222;
+        }
+
+        /* Navigation (same as above) */
+        .navbar {
+            background: #ffe4ec;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-weight: bold;
+            font-size: 22px;
+            color: #222;
+            letter-spacing: .5px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #333;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e84e89;
+        }
+
+        /* Page layout */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .subtext {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Social link cards */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .social-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .social-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .social-card a {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #e84e89;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .social-card p {
+            margin: 0;
+            font-size: 15px;
+            color: #555;
+        }
+
+    </style>
 </head>
+
 <body>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="socials.html">Socials</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Anika Clark</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="socials.html">Socials</a></li>
+    </ul>
+  </div>
 </nav>
 
-<h1>Connect With Me</h1>
+<!-- CONTENT -->
+<div class="container">
+    <h1>Connect With Me</h1>
+    <p class="subtext">
+        I’d love to connect! Feel free to follow my work, reach out, or talk about design, art, and creative opportunities.
+    </p>
 
-<ul>
-    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-    <li><a href="https://www.behance.net/" target="_blank">Behance</a></li>
-    <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
-    <li><a href="mailto:your@email.com">Email Me</a></li>
-</ul>
+    <div class="social-grid">
+        <div class="social-card">
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            <p>Art, process, and daily creative updates.</p>
+        </div>
+
+        <div class="social-card">
+            <a href="https://www.behance.net/" target="_blank">Behance</a>
+            <p>Full project breakdowns and case studies.</p>
+        </div>
+
+        <div class="social-card">
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <p>Professional profile and experience.</p>
+        </div>
+
+        <div class="social-card">
+            <a href="mailto:your@email.com">Email Me</a>
+            <p>Reach out for commissions or collaboration!</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
+
