@@ -16,8 +16,8 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: #ffe4ec;
+            padding: 70px 20px;
+            background: linear-gradient(180deg, #eb2dd1, #fff);
         }
 
         header h1 {
@@ -31,6 +31,31 @@
             margin: 0 auto;
             line-height: 1.5;
         }
+        .hero-image {
+            width: 220px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .section-title::before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #e84e89;
+            margin: 0 auto 12px;
+            border-radius: 2px;
+        }
+
+
 
         section {
             padding: 40px 20px;
@@ -87,6 +112,8 @@
             font-size: 24px;
             color: #222;
         }
+
+        
         .nav-links {
             list-style: none;
             display: flex;
@@ -94,8 +121,10 @@
             margin: 0;
             padding: 0;
         }
+
         .nav-links a {
             text-decoration: none;
+            letter-spacing: 0.3px;
             font-weight: 500;
             color: #333;
             transition: color 0.2s ease;
@@ -103,8 +132,58 @@
         .nav-links a:hover {
             color: #e84e89;
         }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            background: #e84e89;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: #fff;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        footer a {
+            color: #e84e89;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
     </style>
+
+
 </head>
+
 
 <body>
 
@@ -114,47 +193,58 @@
     <div class="nav-logo">Anika Clark</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="resume.html">About</a></li>
+      <li><a href="files/AnikaClarkResume.pdf" target="_blank">Resume</a></li>
       <li><a href="socials.html">Socials</a></li>
     </ul>
   </div>
 </nav>
 
 <header>
-    <h1>Anika Clark's Portfolio</h1>
-    <p>
-        Welcome to my portfolio! I am Anika Clark, a passionate graphic designer and illustrator. 
-        Here you will find a collection of my work, including branding projects, digital illustrations, 
-        and print designs. Feel free to explore and reach out!
-    </p>
+    <img src="images/Anika_Headshot.jpeg" alt="Anika Clark" class="hero-image" />
+    <h1>Anika Clark</h1>
+    <p>Graphic Designer & Illustrator</p>
 </header>
 
+
 <section>
-    <h2 style="text-align:center; margin-bottom:20px;">My Work</h2>
+    <h2 class="section-title">My Work</h2>
 
     <div class="gallery">
-        <a href="images/NEW product.jpg" target="_blank">
-            <img src="images/NEW product.jpg" alt="Jump Around graphic" />
+        <a href="images/JumpAround.jpg" target="_blank" class = "fade-in">
+            <img src="images/JumpAround.jpg" alt="Jump Around graphic" />
         </a>
 
-        <a href="images/collage_1.png" target="_blank">
+        <a href="images/collage_1.png" target="_blank" class="fade-in">
             <img src="images/collage_1.png" alt="collage_1" />
         </a>
 
-        <a href="images/collage_2.png" target="_blank">
+        <a href="images/collage_2.png" target="_blank" class="fade-in">
             <img src="images/collage_2.png" alt="collage_2" />
         </a>
 
-        <a href="images/Pink_Flamingo_Menu_1.png" target="_blank">
+        <a href="images/Pink_Flamingo_Menu_1.png" target="_blank" class="fade-in">
             <img src="images/Pink_Flamingo_Menu_1.png" alt="Pink Flamingo Menu Design" />
         </a>
     </div>
 </section>
 
 
+<!-- FOOTER -->
 <footer>
-    © 2025 – Portfolio of Anika Clark
+    © 2025 Anika Clark • 
+    <a href="socials.html">Get in Touch</a>
 </footer>
 
 </body>
 </html>
+
+<script>
+document.addEventListener("scroll", () => {
+    document.querySelectorAll(".fade-in").forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if (rect < window.innerHeight - 80) {
+            el.classList.add("visible");
+        }
+    });
+});
+</script>

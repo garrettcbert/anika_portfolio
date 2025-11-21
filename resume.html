@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anika Clark – Portfolio</title>
+
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            color: #222;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #ffe4ec;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            padding: 10px;
+        }
+
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover / touch effect */
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Navigation (same as socials.html) */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: #222;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #333;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #e84e89;
+        }
+        /* Footer */
+        footer {
+            background: #fff;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+
+        footer a {
+            color: #e84e89;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Anika Clark</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="socials.html">Socials</a></li>
+    </ul>
+  </div>
+</nav>
+
+<iframe 
+    src="files/Anikafinishedresume.pdf" 
+    style="width:100%; height:90vh; border:none;">
+</iframe>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Anika Clark • 
+    <a href="socials.html">Get in Touch</a>
+</footer>
+
+</body>
+</html>
