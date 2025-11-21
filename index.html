@@ -40,15 +40,23 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            padding: 10px;
         }
+
 
         .gallery img {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover / touch effect */
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
         }
 
         footer {
@@ -106,8 +114,7 @@
     <div class="nav-logo">Anika Clark</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">About</a></li>
       <li><a href="socials.html">Socials</a></li>
     </ul>
   </div>
@@ -126,11 +133,24 @@
     <h2 style="text-align:center; margin-bottom:20px;">My Work</h2>
 
     <div class="gallery">
-        <img src="images/Pink_Flamingo_Menu_1.png" alt="Pink Flamingo Menu Design" />
-        <img src="images/collage_1.png" alt="collage_1" />
-        <img src="images/collage_2.png" alt="collage_2" />
+        <a href="images/NEW product.jpg" target="_blank">
+            <img src="images/NEW product.jpg" alt="Jump Around graphic" />
+        </a>
+
+        <a href="images/collage_1.png" target="_blank">
+            <img src="images/collage_1.png" alt="collage_1" />
+        </a>
+
+        <a href="images/collage_2.png" target="_blank">
+            <img src="images/collage_2.png" alt="collage_2" />
+        </a>
+
+        <a href="images/Pink_Flamingo_Menu_1.png" target="_blank">
+            <img src="images/Pink_Flamingo_Menu_1.png" alt="Pink Flamingo Menu Design" />
+        </a>
     </div>
 </section>
+
 
 <footer>
     © 2025 – Portfolio of Anika Clark
